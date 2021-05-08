@@ -1,0 +1,35 @@
+.background{
+    background-image: url('../Shared/images/bg-pattern.svg');
+    background-size: cover;
+    height: 55vh;
+    position: relative;
+}
+.bg-image{
+    position: absolute;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.background > h1, p {
+    z-index: 100;
+    position: absolute;
+}
+
+.background > h1{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.background > p{
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -37%);
+}
+
+
+
+
+
