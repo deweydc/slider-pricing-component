@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import SliderComponent from './Slider';
 import Switch from '@material-ui/core/Switch';
 import CheckIcon from '@material-ui/icons/Check';
 import './PricingModule.css';
 
 const PricingModule = () => {
 
+    //setting state for Price
+    const [price, setPrice] = useState(20);
 
     return (
         <div className='container'>
             <div className="header">
                 <span className="page-views">100k pageviews</span>
-                <span className="price">$16.00</span>
+                <span className="price">${price}.00</span>
                 <span className="pricing"> / month</span>
             </div>
 
-            <div className="slider-container">
-                {/* slider */}
-                <input type="range" className='slider' />
-            </div>
+            <SliderComponent
+                defaultPrice={20}
+                onChange={e => setPrice(e.target.value)}
+                price={price}
+
+            />
 
             <div className="duration">
                 <span>Monthly Billing</span>
