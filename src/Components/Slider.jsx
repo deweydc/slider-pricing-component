@@ -3,9 +3,12 @@ import React, { useState } from "react";
 
 import './Slider.css';
 import 'react-input-range/lib/css/index.css';
+import { MaximizeTwoTone } from "@material-ui/icons";
 
-//destructure props from Pricingmodule
+//destructure props from pricingModule
 const SliderComponent = ({ onChange, defaultPrice }) => {
+
+
 
     return (
         <div>
@@ -13,12 +16,14 @@ const SliderComponent = ({ onChange, defaultPrice }) => {
                 <input
                     className='slider'
                     type="range"
-                    min={10}
-                    max={30}
-                    step={10}
+                    list='prices'
+                    min={9.99}
+                    max={69.99}
+                    step={6}
                     onChange={onChange}
                     defaultValue={defaultPrice}
                 />
+
             </div >
         </div>
     )

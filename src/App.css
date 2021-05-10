@@ -2,6 +2,6 @@
   margin: 0;
   padding: 0;
 }
-/* .App {
-  text-align: center;
-} */
+.App, html {
+  background: rgb(237, 237, 237)
+}

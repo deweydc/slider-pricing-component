@@ -24,6 +24,8 @@
 .header{
     display: flex;
     justify-content: space-between;
+    margin-bottom: -20px;
+    margin-top: 10px;
 }
 .page-views{
     text-transform: uppercase;
@@ -38,9 +40,14 @@
     align-self: center;
 }
 .price{
-    font-size: 3.5em;
+    font-size: 2.75em;
     font-weight: 700;
     margin-left: 90px;
+}
+
+.savings{
+    text-align: center;
+    color: green;
 }
 
 
@@ -84,10 +91,18 @@ button{
     padding: 10px 40px;
     border-radius: 50px;
     background-color: #283157;
-    color: white;
+    color: rgb(201, 201, 201);
     font-size: 1.2em;
 }
 .checkmark{
     color: rgb(8, 250, 8);
     margin: 10px 10px 0 0;
+}
+
+
+.right button:hover{
+    font: 800;
+    color: white;
+    cursor: pointer;
+
 }

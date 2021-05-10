@@ -6,30 +6,57 @@ import './PricingModule.css';
 
 const PricingModule = () => {
 
+
+    let [max, setMax] = useState(69.99);
+    let [min, setMin] = useState(9.99);
+    let [step, setStep] = useState(6);
+
+    let [priceList, setPriceList] = useState([])
+
+
+
     //setting state for Price
-    const [price, setPrice] = useState(20);
+    const [price, setPrice] = useState(39.99);
+    //setting duration of subscription 
+    const [monthly, setMonthly] = useState(true);
+
+    const handleToggle = () => {
+        monthly ? setMonthly(false) : setMonthly(true)
+    }
+
+    //setting logic fo var for yearly price
+    let yearlyPrice = Math.round(price * 12 - (price * 12 * 0.25)) - .01.toFixed(2)
+
+    let savings = Math.round(price * 12 * .25)
+
 
     return (
         <div className='container'>
             <div className="header">
                 <span className="page-views">100k pageviews</span>
-                <span className="price">${price}.00</span>
-                <span className="pricing"> / month</span>
+
+                {!monthly ? <span className="price">${price}</span> : <span className="price">${yearlyPrice}</span>}
+                {!monthly ? <span className="pricing">/ monthly</span> : <span className="pricing">/ yearly</span>}
             </div>
 
+            {
+                monthly ?
+                    <h3 className="savings">${savings} Savings</h3> :
+                    <h3></h3>
+            }
+
             <SliderComponent
-                defaultPrice={20}
+                defaultPrice={39.99}
                 onChange={e => setPrice(e.target.value)}
                 price={price}
-
             />
 
             <div className="duration">
                 <span>Monthly Billing</span>
                 <Switch
-                    defaultChecked
-                    color="default"
-                    inputProps={{ 'aria-label': 'checkbox with default color' }}
+                    checked={monthly}
+                    onClick={handleToggle}
+
                 />
                 <span>Yearly Billing</span>
                 <span className="discount">25% discount</span>
