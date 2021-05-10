@@ -23,6 +23,7 @@
 
 .header{
     display: flex;
+    text-align: center;
     justify-content: space-between;
     margin-bottom: -20px;
     margin-top: 10px;
@@ -34,10 +35,16 @@
     font-weight: 500;
     margin-left: 4rem;
     align-self: center;
+  
+}
+.header__right{
+   
 }
 .pricing{
     margin-right: 4rem;
     align-self: center;
+    font-weight: 700;
+    color: rgb(145, 145, 145);
 }
 .price{
     font-size: 2.75em;
@@ -48,6 +55,8 @@
 .savings{
     text-align: center;
     color: green;
+
+
 }
 
 

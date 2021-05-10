@@ -6,15 +6,6 @@ import './PricingModule.css';
 
 const PricingModule = () => {
 
-
-    let [max, setMax] = useState(69.99);
-    let [min, setMin] = useState(9.99);
-    let [step, setStep] = useState(6);
-
-    let [priceList, setPriceList] = useState([])
-
-
-
     //setting state for Price
     const [price, setPrice] = useState(39.99);
     //setting duration of subscription 
@@ -35,14 +26,16 @@ const PricingModule = () => {
             <div className="header">
                 <span className="page-views">100k pageviews</span>
 
-                {!monthly ? <span className="price">${price}</span> : <span className="price">${yearlyPrice}</span>}
-                {!monthly ? <span className="pricing">/ monthly</span> : <span className="pricing">/ yearly</span>}
-            </div>
+                <div className="header__right">
+                    {!monthly ? <span className="price">${price}</span> : <span className="price">${yearlyPrice}</span>}
+                    {!monthly ? <span className="pricing">/ monthly</span> : <span className="pricing">/ yearly</span>}
+                </div>
 
+            </div>
             {
                 monthly ?
                     <h3 className="savings">${savings} Savings</h3> :
-                    <h3></h3>
+                    <div style={{ padding: 11 }} ></div>
             }
 
             <SliderComponent
@@ -76,8 +69,6 @@ const PricingModule = () => {
                 </div>
 
             </div>
-
-
 
         </div >
     )
