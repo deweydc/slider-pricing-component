@@ -12,22 +12,28 @@
     transform: translate(-50%, -30%);
 }
 
-.background > h1, p {
+.title {
     z-index: 100;
     position: absolute;
-}
-
-.background > h1{
+    text-align: center;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
+    
 }
 
-.background > p{
+.title > h1{
+    margin-bottom: 10px;
+    
+}
+
+
+
+/* .background > p{
     top: 37%;
     left: 50%;
     transform: translate(-50%, -37%);
-}
+} */
 
 
 

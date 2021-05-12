@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-
-
 import './Slider.css';
 import 'react-input-range/lib/css/index.css';
-import { MaximizeTwoTone } from "@material-ui/icons";
 
 //destructure props from pricingModule
 const SliderComponent = ({ onChange, defaultPrice }) => {
-
-
 
     return (
         <div>
@@ -23,7 +18,6 @@ const SliderComponent = ({ onChange, defaultPrice }) => {
                     onChange={onChange}
                     defaultValue={defaultPrice}
                 />
-
             </div >
         </div>
     )

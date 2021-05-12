@@ -23,6 +23,7 @@ const PricingModule = () => {
 
     return (
         <div className='container'>
+
             <div className="header">
                 <span className="page-views">100k pageviews</span>
 
@@ -32,11 +33,16 @@ const PricingModule = () => {
                 </div>
 
             </div>
-            {
-                monthly ?
-                    <h3 className="savings">${savings} Savings</h3> :
-                    <div style={{ padding: 11 }} ></div>
-            }
+            <div className="savings__container">
+                {
+                    monthly ?
+                        <h3 className="savings">${savings} Savings</h3> :
+                        <></>
+                }
+            </div>
+
+
+
 
             <SliderComponent
                 defaultPrice={39.99}

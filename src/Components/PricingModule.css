@@ -6,42 +6,58 @@
     border-radius: 10px;
     box-shadow: 0 5px 10px 10px rgba(82, 82, 82, 0.077);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 40em;
-    height: 35em;
-    position: absolute;
+    padding: 0 2em;
+    max-width: 40em;
+    min-height: 40vh;
+    /* position: absolute; */
+    position: relative;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -60%);
     background-color: #fff;
+    /* margin: 0 auto; */
+    
+
+    
 }
 .container > div {
-    width: 100%;
+    min-width: 80%;
 }
 
 .header{
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: space-between;
     margin-bottom: -20px;
-    margin-top: 10px;
+    max-width: 100%;
+    
+
+
+    
+    
 }
 .page-views{
     text-transform: uppercase;
     font-size: 1.3em;
     color: rgb(147, 147, 147);
     font-weight: 500;
-    margin-left: 4rem;
+    /* padding-left: 4rem; */
     align-self: center;
-  
+    flex-grow: 1;
+    width: 12em;
+    margin-right: 50px;
+    display: flex;
+    justify-self: flex-start;
+
 }
-.header__right{
-   
-}
+
 .pricing{
-    margin-right: 4rem;
+    /* padding-right: 4rem; */
     align-self: center;
     font-weight: 700;
     color: rgb(145, 145, 145);
@@ -49,29 +65,38 @@
 .price{
     font-size: 2.75em;
     font-weight: 700;
-    margin-left: 90px;
+    /* padding-left: 90px; */
+    justify-self: center;
+}
+.header__right{
+    min-width: 15em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .savings{
-    text-align: center;
     color: green;
-
-
+    position: relative;
+    margin: -10px 0 0 0;
+    width: 100%;
+    text-align: end;
 }
-
-
 
 .duration{
     display: flex;
+    flex-wrap: wrap;
     justify-content:flex-end;
     align-items: center;
     font-size: 1em;
     color: rgb(147, 147, 147);
-    font-weight: 500;
-    margin-right: 8rem;  
+    font-weight: 500;  
+   
 }
 .duration > span{
-    margin: .3em;
+    margin: .5rem;
+    
 }
 .discount{
     /* border: 1px solid black; */
@@ -81,20 +106,24 @@
     padding: 1px 5px;
     font-size: .75em;
     font-weight: bold;
+    /* margin-right: 2rem !important; */
 }
 
 .trial{
-    padding: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+    /* padding: 1.5rem; */
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-between;
     align-items: center;
     border-top: 1px solid rgb(215, 215, 215);
 }
 .left{
-    margin-left: 4rem;
+    /* padding-left: 1rem; */
 }
 .right{
-    margin-right: 4rem;
+    /* padding-right: 1rem; */
 }
 button{
     padding: 10px 40px;
@@ -108,10 +137,17 @@ button{
     margin: 10px 10px 0 0;
 }
 
-
 .right button:hover{
     font: 800;
     color: white;
     cursor: pointer;
+}
+
+.savings-container{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 20em;
 
 }
