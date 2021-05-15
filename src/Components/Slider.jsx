@@ -13,8 +13,8 @@ const SliderComponent = ({ onChange, defaultPrice }) => {
                     type="range"
                     list='prices'
                     min={9.99}
-                    max={69.99}
-                    step={6}
+                    max={99.99}
+                    step={10}
                     onChange={onChange}
                     defaultValue={defaultPrice}
                 />

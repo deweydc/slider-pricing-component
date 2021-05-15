@@ -20,16 +20,25 @@ const PricingModule = () => {
 
     let savings = Math.round(price * 12 * .25)
 
+    // let pageViews = 
+
 
     return (
+
+
         <div className='container'>
 
             <div className="header">
-                <span className="page-views">100k pageviews</span>
+                <span className="page-number">{100}k</span>
+                <span className="page-views">pageviews</span>
 
                 <div className="header__right">
-                    {!monthly ? <span className="price">${price}</span> : <span className="price">${yearlyPrice}</span>}
-                    {!monthly ? <span className="pricing">/ monthly</span> : <span className="pricing">/ yearly</span>}
+                    <div className="price__container">
+                        {!monthly ? <span className="price">${price}</span> : <span className="price">${yearlyPrice}</span>}
+                    </div>
+                    <div className="duration__container">
+                        {!monthly ? <span className="pricing">/ monthly</span> : <span className="pricing">/ yearly</span>}
+                    </div>
                 </div>
 
             </div>
@@ -48,6 +57,7 @@ const PricingModule = () => {
                 defaultPrice={39.99}
                 onChange={e => setPrice(e.target.value)}
                 price={price}
+                className='slider'
             />
 
             <div className="duration">

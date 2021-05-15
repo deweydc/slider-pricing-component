@@ -51,12 +51,12 @@ input[type=range]::-webkit-slider-thumb {
     width: 40px;
     border-radius: 50%;
     margin-top: -15px;
-    -webkit-appearance: none;
     background-image:url(../Shared/images/icon-slider.svg);
     background-color: rgba(8, 235, 201, 0.865);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 70%;
     object-fit: contain;
+    background-position: center center;
 }
 
 input[type=range]:focus {
@@ -65,4 +65,10 @@ input[type=range]:focus {
 
 input[type=range]:focus::-webkit-slider-runnable-track {
     
+}
+
+.right_slider{
+    width: 50px;
+    height: auto;
+    background-color:red;
 }
